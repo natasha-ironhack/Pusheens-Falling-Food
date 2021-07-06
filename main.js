@@ -1,4 +1,4 @@
-// script.js => MAIN.JS. Managing DOM elements & event listeners
+//MAIN.JS. Managing DOM elements & event listeners
 
 // GLOBAL VARIABLES
 
@@ -31,7 +31,7 @@ startButton.addEventListener("click", () => {
 });
 
 //canvas.addEventListener("click", () => {
-//  gameObj.pusheen.birdJump();
+//  gameObj.pusheen.Jump();
 //});
 
 restartButton.addEventListener("click", () => {

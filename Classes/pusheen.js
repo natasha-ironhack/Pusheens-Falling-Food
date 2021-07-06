@@ -17,14 +17,23 @@ class Pusheen {
   };
 
   //construct movement of player
-  /*
-    this.moveLeft = function () {
+ /*
+  moveLeft = function () {
       if (this.x > 0) {
         this.x -= this.speed;
         //or this.imageSpeed?
       }
     };
-    */
+  */
+  moveLeft = () => {
+  window.addEventListener('keyleft', function (e) {
+      moveLeft.key = e.keyCode;
+    })
+    document.addEventListener('keyup', function (e) {
+      myGameArea.key = false;
+    })
+  }
+
   //Moves the player right
   moveRight = function () {
     if (this.x < canvas.width - this.width) {

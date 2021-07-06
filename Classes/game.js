@@ -28,7 +28,7 @@ class Game {
 
     //2. movement of elements (food, Pusheen, gameover screen, etc) or
     //other actions
-   // this.pusheen.moveLeft();
+   this.pusheen.moveLeft();
     //this.pusheen.moveRight();
     //this.generateFood();
     //this.gameOverCheck();

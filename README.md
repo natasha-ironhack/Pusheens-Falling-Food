@@ -18,12 +18,12 @@ Backlog:
 
 Data Structure:
 --Main.js:
--buildSplashScreen () {}
--buildGameScreen () {}
--buildGameOverScreen () {}
+-build SplashScreen () {}
+-build GameScreen () {} (refers to game glass in game.js)
+-build GameOverScreen () {}
 
 --Game.js
--Game () {}
+-class Game () {}
 -gameLoop () {}
 -checkCollisions () {}
 -generateFood () {}
@@ -33,17 +33,17 @@ Data Structure:
 -GameOver () {}
 
 --Pusheen.js
--Pusheen () { this.x; this.y; this.direction; this.size }
+-class Pusheen () { this.x; this.y; this.direction; this.size }
 -draw () {}
 -moveLeft () {}
 -moveRight () {}
--pusheenCollision () {}
+-pusheenFoodCollision () {}
 
 --Food.js
--food () { this.x; this.y; this.direction; this.size }
+-class Food () { this.x; this.y; this.direction; this.size }
 -draw () {}
 -move () {}
--pusheenCollision () {}
+-pusheenFoodCollision () {}
 
 States y States Transitions:
 Definition of the different states and their transition (transition functions)
@@ -51,25 +51,30 @@ Definition of the different states and their transition (transition functions)
 -gameScreen
 -gameOverScreen
 
-Task:
-main - buildDom
-main - buildSplashScreen
-main - addEventListener
-main - buildGameScreen
-main - buildGameOverScreen
-game - startLoop
-game - buildCanvas
-game - updateCanvas
-game - drawCanvas
+Tasks:
+main - buildDom DONE
+main - buildSplashScreen (via HTML, CSS and main.js) DONE
+main - addEventListener (so when button clicked, goes to game screen) DONE
+main - buildGameScreen (refers to class game in game.js) DONE(basics at least)
+main - buildGameOverScreen (via HTML, CSS and main.js) DONE
+game - startLoop DONE
+game - buildCanvas DONE
+game - drawCanvas DONE
+pusheen - draw DONE
+game - addPusheen DONE
+pusheen - move  
+game - add Pusheen's movement
 food - draw
 food - move / drop randomly
-game - drop food
-pusheen - draw
-pusheen - move
-game - addPusheen
+game - add food
+game - move / drop food
 game - checkCollision
+game - add scoreboard
 game - GameOver
 game - addEventListener
+pusheen or game - animate pusheen
+game - add music
+game - add sound effects
 
 Links:
 
