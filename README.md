@@ -52,27 +52,31 @@ Definition of the different states and their transition (transition functions)
 -gameOverScreen
 
 Tasks:
-main - buildDom DONE
+main - buildDom / create 3 states overall (splashscreen, canvas, gameOver) DONE
 main - buildSplashScreen (via HTML, CSS and main.js) DONE
 main - addEventListener (so when button clicked, goes to game screen) DONE
 main - buildGameScreen (refers to class game in game.js) DONE(basics at least)
-main - buildGameOverScreen (via HTML, CSS and main.js) DONE
-game - startLoop DONE
+game - startLoop (to get game going) DONE
 game - buildCanvas DONE
 game - drawCanvas DONE
 pusheen - draw DONE
 game - addPusheen DONE
-pusheen - move  
+pusheen - move     increase, decrease x posiiton of player
+pusheen - add event listener to keyboard (in ponggame)
 game - add Pusheen's movement
 food - draw
 food - move / drop randomly
 game - add food
 game - move / drop food
-game - checkCollision
+game - add PusheenFoodCollision
 game - add scoreboard
+game - tie PusheenFood Collision w/ scoreboard
+game - add Hits scoreboard (for collision w/ low-fat cat food)
+main - buildGameOverScreen (via HTML, CSS and main.js) partially DONE
+game - tie 3 Hits w/ end of game
 game - GameOver
 game - addEventListener
-pusheen or game - animate pusheen
+pusheen or game - animate pusheen as a gif
 game - add music
 game - add sound effects
 

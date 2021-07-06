@@ -2,7 +2,7 @@ class Game {
   constructor() {
     // arguments are used to personalize the objects
     this.bg = new Image();
-    this.bg.src = "../Images/cafebg.png";
+    this.bg.src = "../Images/bg.jpg";
     this.pusheen = new Pusheen();
     //this.foods = [];
     //this.isGameOn = true;
