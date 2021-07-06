@@ -3,7 +3,7 @@ class Game {
     // arguments are used to personalize the objects
     this.bg = new Image();
     this.bg.src = "../Images/cafebg.png";
-    this.pusheen; //= new Pusheen();
+    this.pusheen = new Pusheen();
     //this.foods = [];
     //this.isGameOn = true;
   }
@@ -28,8 +28,8 @@ class Game {
 
     //2. movement of elements (food, Pusheen, gameover screen, etc) or
     //other actions
-    this.pusheen.moveLeft();
-    this.pusheen.moveRight();
+   // this.pusheen.moveLeft();
+    //this.pusheen.moveRight();
     //this.generateFood();
     //this.gameOverCheck();
 
