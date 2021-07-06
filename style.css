@@ -1,5 +1,39 @@
-canvas {
-    border: 1px solid black;
-    position: absolute;
+#header {
+    text-align: center;
+    color: #f73ba2;
+text-shadow: 0 0 1px black,
+0 0 1px black,
+0 0 1px black,
+0 0 1px black;
+}
+
+#my-canvas {
     background-color: transparent;
+    border: 1px solid black;
+}
+
+#start-btn,
+#restart-btn {
+    background-color: #f73ba2;
+    color: white;
+    padding: 20px;
+    position: absolute;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: "comic-sans MS";
+    margin: 70px
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#my-canvas {
+    display: none
+}
+
+#gameover-screen {
+    display: none
 }
