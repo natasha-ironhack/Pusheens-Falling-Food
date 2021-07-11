@@ -1,63 +1,36 @@
 //MAKE THE CLASS
-class Food {}
-
-//DRAW THE OBJECTS(FOOD)
-
-//MOVEMENT
-
-//INTERACTION W/ PUSHEEN (COLLISION!)
-
-//(RETURN)
-
-//making the class
-/*
-class Bird {
-  constructor() {
-    this.x = 50;
-    this.y = canvas.height / 2;
-    this.width = 40;
-    this.height = 40;
-    this.image = new Image();
-    this.image.src = "../images/flappy.png";
-    this.speed = 1;
+class Food {
+  constructor(xPos, srcURL, isLowfatFood) {
+    // isLowfatFood = ? true or false
+    this.x = xPos;
+    this.y = 0;
+    //this.x = Math.random() * canvas.width;
+    //this.y = Math.random() * (canvas.height / 3);
+    this.foodScore = 0;
+    this.foodNumber = Math.floor(Math.random() * 2)
+    this.foodWidth = 50;
+    this.foodHeight = 50;
+    this.foodScore = 0;
+    this.foodImage = new Image();
+    this.foodImage.src = srcURL;
+    this.foodSpeed = Math.floor(Math.random() * 3 + 1);
+    this.isLowfatFood = isLowfatFood;
   }
-*/
 
-// DRAWING OF THE OBJS/FOOD
-//drawBird = () => {
-//  ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
-//};
-
-//MOVEMENT
-/*
-  birdGravity = () => {
-    if (this.y + this.height < canvas.height) {
-      this.y++;
-    }
-  };
-
-  birdJump = () => {
-    this.y -= 40;
-  };
-
-//INTERACTION W/ ANOTHER OBJECT / COLLISION
-  birdPipeCollision = (pipe) => {
-    // pipe is gonna be an obj with all pipe properties
-
-    //   if (this.x < pipe.x + pipe.width &&
-    //     this.x + this.width > pipe.x &&
-    //     this.y < pipe.y + pipe.height &&
-    //     this.y + this.height > pipe.y) {
-    //      // collision detected!
-    //      return true
-    //  }
-
-    return (
-      this.x < pipe.x + pipe.width &&
-      this.x + this.width > pipe.x &&
-      this.y < pipe.y + pipe.height &&
-      this.y + this.height > pipe.y
+  // DRAW FOOD into canvas using constructed properties above
+  //method to draw the food
+  drawFood = () => {
+    ctx.drawImage(
+      this.foodImage,
+      this.x,
+      this.y,
+      this.foodWidth,
+      this.foodHeight
     );
   };
+
+  //method that moves the food
+  foodMove = () => {
+    this.y += this.foodSpeed;
+  };
 }
-*/

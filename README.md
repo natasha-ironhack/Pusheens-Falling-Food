@@ -61,20 +61,19 @@ game - buildCanvas DONE
 game - drawCanvas DONE
 pusheen - draw DONE
 game - addPusheen DONE
-pusheen - move     increase, decrease x posiiton of player
-pusheen - add event listener to keyboard (in ponggame)
-game - add Pusheen's movement
-food - draw
-food - move / drop randomly
-game - add food
-game - move / drop food
-game - add PusheenFoodCollision
+pusheen - move     increase, decrease x posiiton of player DONE
+pusheen - add event listener to keyboard (in ponggame)   DONE
+game - add Pusheen's movement  DONE
+food - draw DONE
+food - move / drop randomly DONE
+game - add food  DONE
+game - move / drop food DONE
+game - add PusheenFoodCollision DONE
 game - add scoreboard
 game - tie PusheenFood Collision w/ scoreboard
-game - add Hits scoreboard (for collision w/ low-fat cat food)
 main - buildGameOverScreen (via HTML, CSS and main.js) partially DONE
-game - tie 3 Hits w/ end of game
-game - GameOver
+game - tie lowfat cat food with end of game DONE
+game - GameOver  DONE
 game - addEventListener
 pusheen or game - animate pusheen as a gif
 game - add music
