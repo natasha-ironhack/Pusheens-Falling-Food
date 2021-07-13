@@ -78,7 +78,7 @@ game - addEventListener DONE
 game. - fix bugs!!!!!
 pusheen or game - animate pusheen as a gif
 food - make low fat cat food picture bigger
-game - add gameover music
+game - add gameover music  DONE
 game - add music  DONE
 game - add sound effects DONE
 

@@ -2,19 +2,19 @@ class Game {
   constructor() {
     // arguments are used to personalize the objects
     this.bg = new Image();
-    this.bg.src = "../Images/bg.jpg";
+    this.bg.src = "./Images/bg.jpg";
     this.pusheen = new Pusheen();
     this.foodArr = [];
     this.isGameOn = true;
     this.catch = new Audio();
-    this.catch.src = "../Audio/catch.mp3";
+    this.catch.src = "./Audio/catch.mp3";
     this.music = new Audio();
     //this.musicOn = true;
-    this.music.src = "../Audio/monkeysSpinning.mp3";
+    this.music.src = "./Audio/monkeysSpinning.mp3";
     this.music.volume = 0.1;
     this.catch.volume = 0.1;
     this.gameoverMusic = new Audio();
-    this.gameoverMusic.src = "../Audio/gameover.wav";
+    this.gameoverMusic.src = "./Audio/gameover.wav";
     this.gameoverMusic.volume = 0.1;
     //this.score = 0;
   }
@@ -31,28 +31,28 @@ class Game {
       let randomPos = Math.floor(Math.random() * canvas.width);
 
       //create first food object
-      let food = new Food(randomPos, "../Images/burger.png", false);
+      let food = new Food(randomPos, "./Images/burger.png", false);
       //this.foodScore = 1;
       this.foodArr.push(food);
       //generate more of the same food
 
       let randomPos2 = Math.floor(Math.random() * canvas.width);
-      let food2 = new Food(randomPos2, "../Images/fries.png", false);
+      let food2 = new Food(randomPos2, "./Images/fries.png", false);
       //this.foodScore = 1;
       this.foodArr.push(food2);
 
       let randomPos3 = Math.floor(Math.random() * canvas.width);
-      let food3 = new Food(randomPos3, "../Images/nachos.png", false);
+      let food3 = new Food(randomPos3, "./Images/nachos.png", false);
       //this.foodScore = 1;
       this.foodArr.push(food3);
 
       let randomPos4 = Math.floor(Math.random() * canvas.width);
-      let food4 = new Food(randomPos4, "../Images/cake-slice.png", false);
+      let food4 = new Food(randomPos4, "./Images/cake-slice.png", false);
       //this.foodScore = 1;
       this.foodArr.push(food4);
 
       let randomPos5 = Math.floor(Math.random() * canvas.width);
-      let food5 = new Food(randomPos5, "../Images/lowfat-catfood.png", true);
+      let food5 = new Food(randomPos5, "./Images/lowfat-catfood.png", true);
       //this.foodScore = -1;
       this.foodArr.push(food5);
     }
@@ -69,7 +69,8 @@ class Game {
         //as soon as it collides w/ array, need to remove element from array
         //(.slice (pass(i and amnt of elements)))
         //.remove blanks out the screen
-        this.foodArr.slice(index, 1);
+        this.foodArr.splice(index, 1);
+        //food[i].y += 1
         score += 1;
       }
     });

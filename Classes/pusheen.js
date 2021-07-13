@@ -6,7 +6,7 @@ class Pusheen {
     this.width = 100;
     this.height = 70;
     this.image = new Image();
-    this.image.src = "../Images/Pusheen-still.png";
+    this.image.src = "./Images/Pusheen-still.png";
     this.speed = 8;
     this.gameOver = false;
     this.score = 0;
