@@ -80,15 +80,10 @@ pusheen or game - animate pusheen as a gif
 game - add music  DONE
 game - add sound effects DONE
 
-      //BUG!!!! if pusheen walks over the low-fat cat food area, it still ends the game
-
-      //BUG!!!! if pusheen walks over the food area where it caught the food, audio catch sound plays again. sometimes w/o pusheen?
-
       //BUG!!!! Scoreboard doesn't add one point with reg. food, but a LOT
       of points.
 
-      //BUG!!!! Music doesn't refresh when you press "play again" button.
-      Loops over old bg music track.
+      //ERROR: Deployment not fully functional. Broken logo and game not working.
 
 Links:
 

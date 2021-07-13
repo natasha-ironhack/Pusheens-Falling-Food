@@ -22,7 +22,12 @@ class Pusheen {
   pusheenFoodCollision = (food) => {
     //food is gonna be an obj w/ all food properties
 
-    if (food.y > this.y && food.x > this.x && food.x < this.x + this.width) {
+    if (
+      food.x < this.x + this.width &&
+      food.x + food.foodWidth > this.x &&
+      food.y < this.y + this.height &&
+      food.y + food.foodHeight > this.y
+    ) {
       // collision detected!
       return true;
     }

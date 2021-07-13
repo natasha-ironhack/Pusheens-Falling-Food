@@ -33,7 +33,7 @@ startButton.addEventListener("click", () => {
   // here we need to create the game
   //gameObj has all properties and & methods of Game class
   gameObj = new Game();
-
+  gameObj.music.play();
   gameObj.gameLoop(); // => invoke method
   // here we need to start the game
 });
@@ -55,10 +55,10 @@ restartButton.addEventListener("click", () => {
   // hide the splash screen DOM element
   gameoverScreen.style.display = "none";
 
-  gameObj.musicOn = true;
-
   // here we need to create the game
   gameObj = new Game();
+
+  gameObj.music.play();
 
   gameObj.gameLoop();
 });

@@ -11,6 +11,8 @@ class Game {
     this.music = new Audio();
     //this.musicOn = true;
     this.music.src = "../Audio/monkeysSpinning.mp3";
+    this.music.volume = 0.1
+    this.catch.volume = 0.1
     //this.score = 0;
   }
 
@@ -63,13 +65,14 @@ class Game {
 
   scoreBoard = () => {
     this.foodArr.forEach(
-      (food) => {
+      (food, index) => {
         if (
           this.pusheen.pusheenFoodCollision(food) &&
           food.isLowfatFood == false
         ) {
           this.catch.play();
           score += 1;
+          //as soon as it collides w/ array, need to remove element from array (.slice (pass*(i n amnt of elements)))
         }
       }
       //need to limit score AND music to pusheen catching only 1 food
@@ -93,8 +96,8 @@ class Game {
         //stop music from running
         score = 0;
         //this.musicOn = false;
-       // this.music.pause();
-       //this.music.currentTime = 0;
+       this.music.pause();
+       this.music.currentTime = 0;
       }
     });
   };
@@ -111,26 +114,26 @@ class Game {
       food.foodMove();
     });
     this.scoreBoard();
-    this.gameOverCheck();
-
-    this.music.play();
-
+    
+    
+    
     //3. drawing elements
     ctx.drawImage(this.bg, 0, 0, canvas.width, canvas.height);
-
+    
     //pusheen
     this.pusheen.drawPusheen();
-
+    
     //food
     this.foodArr.forEach((food) => {
       food.drawFood();
     });
-
+    
     //score
     ctx.font = "30px comic-sans MS";
     ctx.fillStyle = "pink";
     ctx.fillText("SCORE: " + score, 580, 40);
-
+    
+    this.gameOverCheck();
     //4. request animation
     if (this.isGameOn) {
       requestAnimationFrame(this.gameLoop);
