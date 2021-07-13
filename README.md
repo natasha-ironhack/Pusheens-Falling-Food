@@ -61,23 +61,34 @@ game - buildCanvas DONE
 game - drawCanvas DONE
 pusheen - draw DONE
 game - addPusheen DONE
-pusheen - move     increase, decrease x posiiton of player DONE
-pusheen - add event listener to keyboard (in ponggame)   DONE
-game - add Pusheen's movement  DONE
+pusheen - move increase, decrease x posiiton of player DONE
+pusheen - add event listener to keyboard (in ponggame) DONE
+game - add Pusheen's movement DONE
 food - draw DONE
 food - move / drop randomly DONE
-game - add food  DONE
+game - add food DONE
 game - move / drop food DONE
 game - add PusheenFoodCollision DONE
-game - add scoreboard
-game - tie PusheenFood Collision w/ scoreboard
+game - add scoreboard DONE
+game - tie PusheenFood Collision w/ scoreboard DONE
 main - buildGameOverScreen (via HTML, CSS and main.js) partially DONE
 game - tie lowfat cat food with end of game DONE
-game - GameOver  DONE
-game - addEventListener
+game - GameOver DONE
+game - addEventListener DONE
+game. - fix bugs!!!!!
 pusheen or game - animate pusheen as a gif
-game - add music
-game - add sound effects
+game - add music  DONE
+game - add sound effects DONE
+
+      //BUG!!!! if pusheen walks over the low-fat cat food area, it still ends the game
+
+      //BUG!!!! if pusheen walks over the food area where it caught the food, audio catch sound plays again. sometimes w/o pusheen?
+
+      //BUG!!!! Scoreboard doesn't add one point with reg. food, but a LOT
+      of points.
+
+      //BUG!!!! Music doesn't refresh when you press "play again" button.
+      Loops over old bg music track.
 
 Links:
 
@@ -85,3 +96,11 @@ Git URL: https://github.com/natasha-ironhack/Pusheens-Falling-Food
 
 Slides:
 URls for the project presentation (slides): https://docs.google.com/presentation/d/1y3iBkcu26QkSKb1SdIbaYLDDciBPyAkj5na3P1k5aAY/edit#slide=id.ge3471791df_0_530
+
+Music Credits:
+Monkeys Spinning Monkeys Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 3.0 License
+http://creativecommons.org/licenses/by/3.0/
+Music promoted by https://www.chosic.com/
+
+Picture Credits:

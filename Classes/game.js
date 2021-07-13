@@ -6,7 +6,12 @@ class Game {
     this.pusheen = new Pusheen();
     this.foodArr = [];
     this.isGameOn = true;
-    this.score = new Score();
+    this.catch = new Audio();
+    this.catch.src = "../Audio/catch.mp3";
+    this.music = new Audio();
+    //this.musicOn = true;
+    this.music.src = "../Audio/monkeysSpinning.mp3";
+    //this.score = 0;
   }
 
   //movement of falling objects
@@ -33,41 +38,43 @@ class Game {
       let randomPos2 = Math.floor(Math.random() * canvas.width);
       let food2 = new Food(randomPos2, "../Images/fries.png", false);
       //this.food.foodNumber = 1;
-      this.foodScore = 1;
+      //this.foodScore = 1;
       this.foodArr.push(food2);
 
       let randomPos3 = Math.floor(Math.random() * canvas.width);
       let food3 = new Food(randomPos3, "../Images/nachos.png", false);
-      this.foodScore = 1;
+      //this.foodScore = 1;
       this.foodArr.push(food3);
 
       let randomPos4 = Math.floor(Math.random() * canvas.width);
       let food4 = new Food(randomPos4, "../Images/cake-slice.png", false);
-      this.foodScore = 1;
+      //this.foodScore = 1;
       this.foodArr.push(food4);
 
       let randomPos5 = Math.floor(Math.random() * canvas.width);
       let food5 = new Food(randomPos5, "../Images/lowfat-catfood.png", true);
-      this.foodScore = -1;
+      //this.foodScore = -1;
       this.foodArr.push(food5);
-
-      //BUG!!!! if pusheen walks over the low-fat cat food area, it still ends the game
-
-      //create condition where they will actually appear. first condition
-      //is if the array is empty, then they will appear.
-      //when one burger arrives half way through screen, another new one w/ appear
     }
   };
 
   //COLLISION / SCOREBOARD (adds 1 point if player collides with reg food)
-  /*
+  //create function where pusheen colliding with fatty food increases score
+
   scoreBoard = () => {
-    this.foodArr.forEach((food) => {
-      if (this.pusheen.pusheenFoodCollision(food)) {
+    this.foodArr.forEach(
+      (food) => {
+        if (
+          this.pusheen.pusheenFoodCollision(food) &&
+          food.isLowfatFood == false
+        ) {
+          this.catch.play();
+          score += 1;
+        }
       }
-    });
+      //need to limit score AND music to pusheen catching only 1 food
+    );
   };
-  */
 
   //COLLISION / GAMEOVER screen if player catches lowfat food
   gameOverCheck = () => {
@@ -77,18 +84,20 @@ class Game {
         this.pusheen.pusheenFoodCollision(food) &&
         food.isLowfatFood === true
       ) {
-        //&& food === this.foodArr[this.foodArr.length -1]
         // stop the game from running
         this.isGameOn = false;
         // remove the canvas
         canvas.style.display = "none";
         // display the gameover screen
         gameoverScreen.style.display = "flex";
+        //stop music from running
+        score = 0;
+        //this.musicOn = false;
+       // this.music.pause();
+       //this.music.currentTime = 0;
       }
     });
   };
-
-  //create function where pusheen colliding with fatty food increases score
 
   //GAMELOOP (what keeps the game running/playing)
   gameLoop = () => {
@@ -97,17 +106,19 @@ class Game {
 
     //2. movement of elements (food, Pusheen, gameover screen, etc) or
     //other actions
-
-    //this.pusheen.moveRight();
     this.generateFood();
     this.foodArr.forEach((food) => {
       food.foodMove();
     });
+    this.scoreBoard();
     this.gameOverCheck();
+
+    this.music.play();
 
     //3. drawing elements
     ctx.drawImage(this.bg, 0, 0, canvas.width, canvas.height);
 
+    //pusheen
     this.pusheen.drawPusheen();
 
     //food
@@ -115,7 +126,10 @@ class Game {
       food.drawFood();
     });
 
-    this.score.drawScore();
+    //score
+    ctx.font = "30px comic-sans MS";
+    ctx.fillStyle = "pink";
+    ctx.fillText("SCORE: " + score, 580, 40);
 
     //4. request animation
     if (this.isGameOn) {

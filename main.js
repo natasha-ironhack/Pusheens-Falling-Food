@@ -1,21 +1,26 @@
 //MAIN.JS. Managing DOM elements & event listeners
 
 // GLOBAL VARIABLES
+let score = 0;
 
 // canvas setup
 let canvas = document.querySelector("#my-canvas");
 let ctx = canvas.getContext("2d");
+ctx.font = "30px Arial";
+ctx.fillStyle = "pink";
+ctx.font = "18px sans-serif";
+ctx.fillText("Score: " + score, 30, 50);
 
 // DOM elements
 let gameoverScreen = document.querySelector("#gameover-screen");
 let splashScreen = document.querySelector("#splash-screen");
 let startButton = document.querySelector("#start-btn");
 let restartButton = document.querySelector("#restart-btn");
+
 // main game global variable
 let gameObj; //=> will have all properties of class Game
 
 //other variables
-let score = 0;
 
 // ADD EVENT LISTENERS
 startButton.addEventListener("click", () => {
@@ -49,6 +54,8 @@ restartButton.addEventListener("click", () => {
   canvas.style.display = "block";
   // hide the splash screen DOM element
   gameoverScreen.style.display = "none";
+
+  gameObj.musicOn = true;
 
   // here we need to create the game
   gameObj = new Game();

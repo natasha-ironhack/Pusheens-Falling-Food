@@ -10,7 +10,6 @@ class Food {
     this.foodNumber = Math.floor(Math.random() * 2)
     this.foodWidth = 50;
     this.foodHeight = 50;
-    this.foodScore = 0;
     this.foodImage = new Image();
     this.foodImage.src = srcURL;
     this.foodSpeed = Math.floor(Math.random() * 3 + 1);
