@@ -7,7 +7,7 @@ class Pusheen {
     this.height = 70;
     this.image = new Image();
     this.image.src = "../Images/Pusheen-still.png";
-    this.speed = 1;
+    this.speed = 8;
     this.gameOver = false;
     this.score = 0;
   }
