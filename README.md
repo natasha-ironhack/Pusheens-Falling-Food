@@ -77,6 +77,8 @@ game - GameOver DONE
 game - addEventListener DONE
 game. - fix bugs!!!!!
 pusheen or game - animate pusheen as a gif
+food - make low fat cat food picture bigger
+game - add gameover music
 game - add music  DONE
 game - add sound effects DONE
 
@@ -97,5 +99,7 @@ Monkeys Spinning Monkeys Kevin MacLeod (incompetech.com)
 Licensed under Creative Commons: By Attribution 3.0 License
 http://creativecommons.org/licenses/by/3.0/
 Music promoted by https://www.chosic.com/
+
+Sad Game Over Trombone (mixkit.co)
 
 Picture Credits:
