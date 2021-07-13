@@ -75,17 +75,13 @@ main - buildGameOverScreen (via HTML, CSS and main.js) partially DONE
 game - tie lowfat cat food with end of game DONE
 game - GameOver DONE
 game - addEventListener DONE
-game. - fix bugs!!!!!
+game. - fix bugs!!!!! DONE
 pusheen or game - animate pusheen as a gif
-food - make low fat cat food picture bigger
-game - add gameover music  DONE
-game - add music  DONE
+food - make low fat cat food picture bigger NAH
+food - asign different food scores to each food
+game - add gameover music DONE
+game - add music DONE
 game - add sound effects DONE
-
-      //BUG!!!! Scoreboard doesn't add one point with reg. food, but a LOT
-      of points.
-
-      //ERROR: Deployment not fully functional. Broken logo and game not working.
 
 Links:
 
