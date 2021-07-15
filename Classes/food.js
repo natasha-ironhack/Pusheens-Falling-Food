@@ -12,7 +12,7 @@ class Food {
     this.foodHeight = 50;
     this.foodImage = new Image();
     this.foodImage.src = srcURL;
-    this.foodSpeed = Math.floor(Math.random() * 4 + 1);
+    this.foodSpeed = Math.floor(Math.random() * 5 + 1);
     this.isLowfatFood = isLowfatFood;
   }
 

@@ -9,14 +9,14 @@ class Game {
     this.catch = new Audio();
     this.catch.src = "./Audio/catch.mp3";
     this.music = new Audio();
-    //this.musicOn = true;
     this.music.src = "./Audio/monkeysSpinning.mp3";
-    this.music.volume = 0.1;
+    this.music.volume = 0.2;
     this.catch.volume = 0.1;
     this.gameoverMusic = new Audio();
     this.gameoverMusic.src = "./Audio/gameover.wav";
     this.gameoverMusic.volume = 0.1;
     //this.score = 0;
+    this.frame = 0;
   }
 
   //movement of falling objects
@@ -32,23 +32,23 @@ class Game {
 
       //create first food object
       let food = new Food(randomPos, "./Images/burger.png", false);
-      //this.foodScore = 1;
+      //this.score = 1;
       this.foodArr.push(food);
       //generate more of the same food
 
       let randomPos2 = Math.floor(Math.random() * canvas.width);
       let food2 = new Food(randomPos2, "./Images/fries.png", false);
-      //this.foodScore = 1;
+      //this.score = 2;
       this.foodArr.push(food2);
 
       let randomPos3 = Math.floor(Math.random() * canvas.width);
       let food3 = new Food(randomPos3, "./Images/nachos.png", false);
-      //this.foodScore = 1;
+      //this.foodScore = 3;
       this.foodArr.push(food3);
 
       let randomPos4 = Math.floor(Math.random() * canvas.width);
       let food4 = new Food(randomPos4, "./Images/cake-slice.png", false);
-      //this.foodScore = 1;
+      //this.foodScore = 10;
       this.foodArr.push(food4);
 
       let randomPos5 = Math.floor(Math.random() * canvas.width);
@@ -60,6 +60,7 @@ class Game {
 
   //COLLISION / SCOREBOARD (adds 1 point if player collides with reg food)
   scoreBoard = () => {
+    //maybe comment this part out (line 64)
     this.foodArr.forEach((food, index) => {
       if (
         this.pusheen.pusheenFoodCollision(food) &&
@@ -107,6 +108,7 @@ class Game {
 
     //2. movement of elements (food, Pusheen, gameover screen, etc) or
     //other actions
+
     this.generateFood();
     this.foodArr.forEach((food) => {
       food.foodMove();
@@ -116,8 +118,43 @@ class Game {
     //3. drawing elements
     ctx.drawImage(this.bg, 0, 0, canvas.width, canvas.height);
 
-    //pusheen
+    //pusheen animated?
+    this.frame++;
     this.pusheen.drawPusheen();
+
+    //METHOD 2
+    console.log(this.pusheen.currentImage);
+    if (this.frame % 20 === 0 && this.pusheen.currentImage.numberImg === 1) {
+      // here you need to change the image. And it will depend on the previous one.
+      this.pusheen.currentImage = this.pusheen.image2;
+    } else if (
+      this.frame % 20 === 0 &&
+      this.pusheen.currentImage.numberImg === 2
+    ) {
+      this.pusheen.currentImage = this.pusheen.image3;
+    } else if (
+      this.frame % 20 === 0 &&
+      this.pusheen.currentImage.numberImg === 3
+    ) {
+      this.pusheen.currentImage = this.pusheen.image4;
+    } else if (
+      this.frame % 20 === 0 &&
+      this.pusheen.currentImage.numberImg === 4
+    ) {
+      this.pusheen.currentImage = this.pusheen.image;
+    }
+
+    //ORIGINAL METHOD
+    /*
+    else if (this.frame >= 60 && this.frame < 120) {
+      this.pusheen.currentImage = this.pusheen.image2;
+    } else if (this.frame >= 120 && this.frame < 180) {
+      this.pusheen.currentImage = this.pusheen.image3;
+    } else if (this.frame >= 180 && this.frame < 240) {
+      this.pusheen.currentImage = this.pusheen.image4;
+    }
+    */
+    // say instead if number is divisiable by 60 then change the value
 
     //food
     this.foodArr.forEach((food) => {
@@ -129,7 +166,10 @@ class Game {
     ctx.fillStyle = "pink";
     ctx.fillText("SCORE: " + score, 580, 40);
 
+    //this.animatePusheenIdle();
+
     this.gameOverCheck();
+
     //4. request animation
     if (this.isGameOn) {
       requestAnimationFrame(this.gameLoop);

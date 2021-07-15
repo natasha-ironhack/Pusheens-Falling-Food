@@ -2,19 +2,31 @@ class Pusheen {
   //construct player properties
   constructor() {
     this.x = 300;
-    this.y = 565;
-    this.width = 100;
-    this.height = 70;
+    this.y = 530;
+    this.width = 130;
+    this.height = 130;
+    //this.image = new Image();
+    //this.image.src = "./Images/Pusheen-still.png";
     this.image = new Image();
-    this.image.src = "./Images/Pusheen-still.png";
-    this.speed = 8;
+    this.image.src = "./Images/pusheen-gif-frame1.png";
+    this.image.numberImg = 1;
+    this.image2 = new Image();
+    this.image2.src = "./Images/pusheen-gif-frame2.png";
+    this.image2.numberImg = 2;
+    this.image3 = new Image();
+    this.image3.src = "./Images/pusheen-gif-frame3.png";
+    this.image3.numberImg = 3;
+    this.image4 = new Image();
+    this.image4.src = "./Images/pusheen-gif-frame4.png";
+    this.image4.numberImg = 4;
+    this.currentImage = this.image; // this saves the reference of another image here
+    this.speed = 30;
     this.gameOver = false;
     this.score = 0;
   }
 
-  // draw player into canvas using constructed properties above
   drawPusheen = () => {
-    ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
+    ctx.drawImage(this.currentImage, this.x, this.y, this.width, this.height);
   };
 
   //construct movement of player (or put it into main.js)
@@ -33,4 +45,6 @@ class Pusheen {
     }
     return;
   };
+
+  //create multiple different collisions for each different food item, then assign different score in game.js file
 }

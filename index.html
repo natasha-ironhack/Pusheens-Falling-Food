@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pusheen's Falling Food</title>
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="lc_gif_player.css" />
   </head>
 
   <body style="margin-left: 15%; margin-top: 3%">
@@ -20,6 +21,9 @@
 
       <!-- Linked canvas (element) here -->
       <canvas id="my-canvas" width="725" height="650"></canvas>
+      <div class="example">
+        <img src="" rel:animated_src="pusheenAnimated.gif" />
+      </div>
 
       <!-- Game over screen -->
       <div id="gameover-screen" class="container">
@@ -34,5 +38,6 @@
     <script src="./Classes/pusheen.js"></script>
     <script src="./Classes/food.js"></script>
     <script src="./Classes/lowfat.js"></script>
+    <script src="lc_gif_player.pack.js"></script>
   </body>
 </html>

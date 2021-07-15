@@ -76,12 +76,13 @@ game - tie lowfat cat food with end of game DONE
 game - GameOver DONE
 game - addEventListener DONE
 game. - fix bugs!!!!! DONE
-pusheen or game - animate pusheen as a gif
-food - make low fat cat food picture bigger NAH
+pusheen or game - animate pusheen as a gif DONE
 food - asign different food scores to each food
 game - add gameover music DONE
 game - add music DONE
 game - add sound effects DONE
+game - maybe instead of gameover music, your voice saying "you made pusheen
+lose weight!"
 
 Links:
 
