@@ -10,7 +10,7 @@ class Game {
     this.catch.src = "./Audio/catch.mp3";
     this.music = new Audio();
     this.music.src = "./Audio/monkeysSpinning.mp3";
-    this.music.volume = 0.2;
+    this.music.volume = 0.3;
     this.catch.volume = 0.1;
     this.gameoverMusic = new Audio();
     this.gameoverMusic.src = "./Audio/gameover.wav";

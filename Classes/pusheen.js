@@ -2,23 +2,23 @@ class Pusheen {
   //construct player properties
   constructor() {
     this.x = 300;
-    this.y = 530;
-    this.width = 130;
-    this.height = 130;
+    this.y = 555;
+    this.width = 125;
+    this.height = 80;
     //original non-animated method:
     //this.image = new Image();
     //this.image.src = "./Images/Pusheen-still.png";
     this.image = new Image();
-    this.image.src = "./Images/pusheen-gif-frame1.png";
+    this.image.src = "./Images/pusheen-gif-frame-1.png";
     this.image.numberImg = 1;
     this.image2 = new Image();
-    this.image2.src = "./Images/pusheen-gif-frame2.png";
+    this.image2.src = "./Images/pusheen-gif-frame-2.png";
     this.image2.numberImg = 2;
     this.image3 = new Image();
-    this.image3.src = "./Images/pusheen-gif-frame3.png";
+    this.image3.src = "./Images/pusheen-gif-frame-3.png";
     this.image3.numberImg = 3;
     this.image4 = new Image();
-    this.image4.src = "./Images/pusheen-gif-frame4.png";
+    this.image4.src = "./Images/pusheen-gif-frame-4.png";
     this.image4.numberImg = 4;
     this.currentImage = this.image; // this saves the reference of another image here
     this.speed = 30;
