@@ -2,7 +2,7 @@ class Pusheen {
   //construct player properties
   constructor() {
     this.x = 300;
-    this.y = 555;
+    this.y = 557;
     this.width = 130;
     this.height = 80;
     //original non-animated method:
