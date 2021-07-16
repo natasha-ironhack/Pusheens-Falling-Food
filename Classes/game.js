@@ -36,6 +36,7 @@ class Game {
         false,
         true,
         false,
+        false,
         false
       );
       this.foodArr.push(food);
@@ -48,6 +49,7 @@ class Game {
         false,
         false,
         true,
+        false,
         false
       );
       this.foodArr.push(food2);
@@ -59,7 +61,8 @@ class Game {
         false,
         false,
         false,
-        true
+        true,
+        false
       );
       this.foodArr.push(food3);
 
@@ -70,7 +73,8 @@ class Game {
         false,
         false,
         false,
-        false
+        false,
+        true
       );
       this.foodArr.push(food4);
 
@@ -79,6 +83,7 @@ class Game {
         randomPos5,
         "./Images/lowfat-catfood.png",
         true,
+        false,
         false,
         false,
         false
@@ -118,7 +123,7 @@ class Game {
       } else if (
         this.pusheen.pusheenFoodCollision(food) &&
         food.isLowfatFood == false &&
-        food.isCake == true
+        food.isCakeSlice == true
       ) {
         this.catch.play();
         this.foodArr.splice(index, 1);

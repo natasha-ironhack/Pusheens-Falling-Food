@@ -1,6 +1,6 @@
 //MAKE THE CLASS
 class Food {
-  constructor(xPos, srcURL, isLowfatFood, isBurger, isFries, isNachos, isCake) {
+  constructor(xPos, srcURL, isLowfatFood, isBurger, isFries, isNachos, isCakeSlice) {
     // isLowfatFood = ? true or false
     this.x = xPos;
     this.y = 0;
@@ -15,7 +15,7 @@ class Food {
     this.isBurger = isBurger;
     this.isFries = isFries;
     this.isNachos = isNachos;
-    this.isCake = isCake;
+    this.isCakeSlice = isCakeSlice;
   }
 
   // DRAW FOOD into canvas using constructed properties above

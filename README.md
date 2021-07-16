@@ -3,15 +3,14 @@
 Pusheen's Falling Food
 
 Description:
-Pusheen's Falling Food is a game where the player has to move Pusheen
-the cat, left and right, and catch the falling foods that appear from
-the top of the screen. The game ends when Pusheen catches low-fat cat food three times.
+"Pusheen Loves Food" is a game where the player has to move Pusheen
+the cat, left and right, with arrow keyboards, and catch the falling food objects that appear from the top of the screen. The game ends when Pusheen catches low-fat cat food.
 
 MVP (DOM - CANVAS):
 -game has one cat that moves horizontally
 -food drops randomly from the top of the screen
--cat catches the falling food items
--catching three low-fat cat food items will end the game
+-cat catches the falling food objects, which all have different scores
+-catching low-fat cat food objects will end the game
 
 Backlog:
 -add scoreboard
@@ -77,17 +76,13 @@ game - GameOver DONE
 game - addEventListener DONE
 game. - fix bugs!!!!! DONE
 pusheen or game - animate pusheen as a gif DONE
-food - asign different food scores to each food DONE (MOSTLY!)
+food - asign different food scores to each food DONE
 game - add gameover music DONE
 game - add music DONE
 game - add sound effects DONE
 game - add clearer instructions on splashscreen DONE
 game - maybe add a score counter at gameOver Screen
-photoshop - crop pusheen's framed pictures to be lower
-
-BLOCKERS:
-
-1. Last food item, cake, not being assigned a score
+photoshop - crop pusheen's framed pictures to be lower DONE
 
 Links:
 
