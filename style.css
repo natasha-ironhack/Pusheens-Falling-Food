@@ -1,3 +1,11 @@
+body {
+    margin: 0;
+
+    background: url("./Images/pusheen-baking15.jpg") no-repeat center fixed;
+    background-size: cover;
+    font-family: 'Times New Roman', Arial, serif;
+}
+
 #header {
     text-align: center;
     color: #ff60b8;
@@ -6,6 +14,7 @@
     0 0 1px black,
     0 0 1px black;
 }
+
 
 #my-canvas {
     background-color: transparent;

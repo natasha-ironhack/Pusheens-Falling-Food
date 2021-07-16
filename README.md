@@ -77,12 +77,16 @@ game - GameOver DONE
 game - addEventListener DONE
 game. - fix bugs!!!!! DONE
 pusheen or game - animate pusheen as a gif DONE
-food - asign different food scores to each food
+food - asign different food scores to each food DONE (MOSTLY!)
 game - add gameover music DONE
 game - add music DONE
 game - add sound effects DONE
-game - maybe instead of gameover music, your voice saying "you made pusheen
-lose weight!"
+game - add clearer instructions on splashscreen DONE
+game - maybe add a score counter at gameOver Screen
+
+BLOCKERS:
+
+1. Last food item, cake, not being assigned a score
 
 Links:
 

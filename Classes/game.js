@@ -15,7 +15,6 @@ class Game {
     this.gameoverMusic = new Audio();
     this.gameoverMusic.src = "./Audio/gameover.wav";
     this.gameoverMusic.volume = 0.1;
-    //this.score = 0;
     this.frame = 0;
   }
 
@@ -31,48 +30,99 @@ class Game {
       let randomPos = Math.floor(Math.random() * canvas.width);
 
       //create first food object
-      let food = new Food(randomPos, "./Images/burger.png", false);
-      //this.score = 1;
+      let food = new Food(
+        randomPos,
+        "./Images/burger.png",
+        false,
+        true,
+        false,
+        false
+      );
       this.foodArr.push(food);
-      //generate more of the same food
 
+      //generate more of the same food
       let randomPos2 = Math.floor(Math.random() * canvas.width);
-      let food2 = new Food(randomPos2, "./Images/fries.png", false);
-      //this.score = 2;
+      let food2 = new Food(
+        randomPos2,
+        "./Images/fries.png",
+        false,
+        false,
+        true,
+        false
+      );
       this.foodArr.push(food2);
 
       let randomPos3 = Math.floor(Math.random() * canvas.width);
-      let food3 = new Food(randomPos3, "./Images/nachos.png", false);
-      //this.foodScore = 3;
+      let food3 = new Food(
+        randomPos3,
+        "./Images/nachos.png",
+        false,
+        false,
+        false,
+        true
+      );
       this.foodArr.push(food3);
 
       let randomPos4 = Math.floor(Math.random() * canvas.width);
-      let food4 = new Food(randomPos4, "./Images/cake-slice.png", false);
-      //this.foodScore = 10;
+      let food4 = new Food(
+        randomPos4,
+        "./Images/cake-slice.png",
+        false,
+        false,
+        false,
+        false
+      );
       this.foodArr.push(food4);
 
       let randomPos5 = Math.floor(Math.random() * canvas.width);
-      let food5 = new Food(randomPos5, "./Images/lowfat-catfood.png", true);
-      //this.foodScore = -1;
+      let food5 = new Food(
+        randomPos5,
+        "./Images/lowfat-catfood.png",
+        true,
+        false,
+        false,
+        false
+      );
       this.foodArr.push(food5);
     }
   };
 
-  //COLLISION / SCOREBOARD (adds 1 point if player collides with reg food)
+  //COLLISION / SCOREBOARD (adds certain # of point if player collides with certain foods)
   scoreBoard = () => {
-    //maybe comment this part out (line 64)
     this.foodArr.forEach((food, index) => {
       if (
         this.pusheen.pusheenFoodCollision(food) &&
-        food.isLowfatFood == false
+        food.isLowfatFood == false &&
+        food.isBurger == true
       ) {
         this.catch.play();
         //as soon as it collides w/ array, need to remove element from array
-        //(.slice (pass(i and amnt of elements)))
-        //.remove blanks out the screen
         this.foodArr.splice(index, 1);
-        //food[i].y += 1
         score += 1;
+      } else if (
+        this.pusheen.pusheenFoodCollision(food) &&
+        food.isLowfatFood == false &&
+        food.isFries == true
+      ) {
+        this.catch.play();
+        this.foodArr.splice(index, 1);
+        score += 2;
+      } else if (
+        this.pusheen.pusheenFoodCollision(food) &&
+        food.isLowfatFood == false &&
+        food.isNachos == true
+      ) {
+        this.catch.play();
+        this.foodArr.splice(index, 1);
+        score += 3;
+      } else if (
+        this.pusheen.pusheenFoodCollision(food) &&
+        food.isLowfatFood == false &&
+        food.isCake == true
+      ) {
+        this.catch.play();
+        this.foodArr.splice(index, 1);
+        score += 10;
       }
     });
   };
@@ -91,12 +141,13 @@ class Game {
         canvas.style.display = "none";
         // display the gameover screen
         gameoverScreen.style.display = "flex";
-        //stop music from running
         score = 0;
-        //this.musicOn = false;
+        //stop music from running
         this.music.pause();
         this.music.currentTime = 0;
+        //play game over music
         this.gameoverMusic.play();
+        //this.scoreBoard();
       }
     });
   };
@@ -108,7 +159,6 @@ class Game {
 
     //2. movement of elements (food, Pusheen, gameover screen, etc) or
     //other actions
-
     this.generateFood();
     this.foodArr.forEach((food) => {
       food.foodMove();
@@ -118,27 +168,25 @@ class Game {
     //3. drawing elements
     ctx.drawImage(this.bg, 0, 0, canvas.width, canvas.height);
 
-    //pusheen animated?
+    //animated pusheen
     this.frame++;
     this.pusheen.drawPusheen();
 
-    //METHOD 2
-    console.log(this.pusheen.currentImage);
-    if (this.frame % 20 === 0 && this.pusheen.currentImage.numberImg === 1) {
+    if (this.frame % 10 === 0 && this.pusheen.currentImage.numberImg === 1) {
       // here you need to change the image. And it will depend on the previous one.
       this.pusheen.currentImage = this.pusheen.image2;
     } else if (
-      this.frame % 20 === 0 &&
+      this.frame % 10 === 0 &&
       this.pusheen.currentImage.numberImg === 2
     ) {
       this.pusheen.currentImage = this.pusheen.image3;
     } else if (
-      this.frame % 20 === 0 &&
+      this.frame % 10 === 0 &&
       this.pusheen.currentImage.numberImg === 3
     ) {
       this.pusheen.currentImage = this.pusheen.image4;
     } else if (
-      this.frame % 20 === 0 &&
+      this.frame % 10 === 0 &&
       this.pusheen.currentImage.numberImg === 4
     ) {
       this.pusheen.currentImage = this.pusheen.image;
@@ -165,8 +213,6 @@ class Game {
     ctx.font = "30px comic-sans MS";
     ctx.fillStyle = "pink";
     ctx.fillText("SCORE: " + score, 580, 40);
-
-    //this.animatePusheenIdle();
 
     this.gameOverCheck();
 

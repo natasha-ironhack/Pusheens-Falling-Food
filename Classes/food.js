@@ -1,19 +1,21 @@
 //MAKE THE CLASS
 class Food {
-  constructor(xPos, srcURL, isLowfatFood) {
+  constructor(xPos, srcURL, isLowfatFood, isBurger, isFries, isNachos, isCake) {
     // isLowfatFood = ? true or false
     this.x = xPos;
     this.y = 0;
-    //this.x = Math.random() * canvas.width;
-    //this.y = Math.random() * (canvas.height / 3);
     this.foodScore = 0;
-    this.foodNumber = Math.floor(Math.random() * 2)
+    this.foodNumber = Math.floor(Math.random() * 2);
     this.foodWidth = 50;
     this.foodHeight = 50;
     this.foodImage = new Image();
     this.foodImage.src = srcURL;
     this.foodSpeed = Math.floor(Math.random() * 5 + 1);
     this.isLowfatFood = isLowfatFood;
+    this.isBurger = isBurger;
+    this.isFries = isFries;
+    this.isNachos = isNachos;
+    this.isCake = isCake;
   }
 
   // DRAW FOOD into canvas using constructed properties above

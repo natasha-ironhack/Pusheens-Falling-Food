@@ -5,6 +5,7 @@ class Pusheen {
     this.y = 530;
     this.width = 130;
     this.height = 130;
+    //original non-animated method:
     //this.image = new Image();
     //this.image.src = "./Images/Pusheen-still.png";
     this.image = new Image();
@@ -29,11 +30,8 @@ class Pusheen {
     ctx.drawImage(this.currentImage, this.x, this.y, this.width, this.height);
   };
 
-  //construct movement of player (or put it into main.js)
-
   pusheenFoodCollision = (food) => {
     //food is gonna be an obj w/ all food properties
-
     if (
       food.x < this.x + this.width &&
       food.x + food.foodWidth > this.x &&
@@ -45,6 +43,4 @@ class Pusheen {
     }
     return;
   };
-
-  //create multiple different collisions for each different food item, then assign different score in game.js file
 }
