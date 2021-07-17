@@ -3,7 +3,7 @@ class Pusheen {
   constructor() {
     this.x = 300;
     this.y = 557;
-    this.width = 130;
+    this.width = 135;
     this.height = 80;
     //original non-animated method:
     //this.image = new Image();
