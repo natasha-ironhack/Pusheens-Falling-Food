@@ -2,19 +2,14 @@
 
 // GLOBAL VARIABLES
 let score = 0;
-//let animate = null;
-//let count = 0;
-//let isIdle = true;
-//lc_gif_player('.example', false, '', ['move']);
-//lc_gif_player('.example', false, '', ['fullscreen']);
 
 // canvas setup
 let canvas = document.querySelector("#my-canvas");
 let ctx = canvas.getContext("2d");
-ctx.font = "30px Arial";
+ctx.font = "25px Arial";
 ctx.fillStyle = "pink";
 ctx.font = "18px sans-serif";
-ctx.fillText("Score: " + score, 30, 50);
+ctx.fillText("Score:" + score, 30, 50);
 
 // DOM elements
 let gameoverScreen = document.querySelector("#gameover-screen");
