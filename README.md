@@ -74,7 +74,7 @@ main - buildGameOverScreen (via HTML, CSS and main.js) partially DONE
 game - tie lowfat cat food with end of game DONE
 game - GameOver DONE
 game - addEventListener DONE
-game. - fix bugs!!!!! DONE
+game. - fix bugs DONE
 pusheen or game - animate pusheen as a gif DONE
 food - asign different food scores to each food DONE
 game - add gameover music DONE
@@ -89,7 +89,9 @@ Links:
 Git URL: https://github.com/natasha-ironhack/Pusheens-Falling-Food
 
 Slides:
-URls for the project presentation (slides): https://docs.google.com/presentation/d/1y3iBkcu26QkSKb1SdIbaYLDDciBPyAkj5na3P1k5aAY/edit#slide=id.ge3471791df_0_530
+Game Presentation Slides: https://docs.google.com/presentation/d/1-2TuPP1ysXIkwpjjfH_7gXyA0elyQJkLJw9P55La8KA/edit?usp=sharing
+
+Instructional Slides: https://docs.google.com/presentation/d/1y3iBkcu26QkSKb1SdIbaYLDDciBPyAkj5na3P1k5aAY/edit#slide=id.ge3471791df_0_530
 
 Music Credits:
 Monkeys Spinning Monkeys Kevin MacLeod (incompetech.com)
@@ -100,3 +102,4 @@ Music promoted by https://www.chosic.com/
 Sad Game Over Trombone (mixkit.co)
 
 Picture Credits:
+Pusheen.com
