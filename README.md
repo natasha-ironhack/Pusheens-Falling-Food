@@ -81,7 +81,7 @@ game - add gameover music DONE
 game - add music DONE
 game - add sound effects DONE
 game - add clearer instructions on splashscreen DONE
-game - maybe add a score counter at gameOver Screen
+game - add a score counter at gameOver Screen  DONE
 photoshop - crop pusheen's framed pictures to be lower DONE
 
 Links:

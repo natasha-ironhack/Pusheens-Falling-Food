@@ -18,6 +18,7 @@ ctx.fillText("Score: " + score, 30, 50);
 
 // DOM elements
 let gameoverScreen = document.querySelector("#gameover-screen");
+let finalScore = document.querySelector("#finalScore");
 let splashScreen = document.querySelector("#splash-screen");
 let startButton = document.querySelector("#start-btn");
 let restartButton = document.querySelector("#restart-btn");
@@ -63,6 +64,7 @@ restartButton.addEventListener("click", () => {
   gameObj = new Game();
 
   gameObj.music.play();
+  //gameObj.score = 0;
 
   gameObj.gameLoop();
 });

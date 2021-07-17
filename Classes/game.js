@@ -146,6 +146,8 @@ class Game {
         canvas.style.display = "none";
         // display the gameover screen
         gameoverScreen.style.display = "flex";
+        // gameOverScore = finalScore.value;
+        finalScore.innerText = score;
         score = 0;
         //stop music from running
         this.music.pause();
@@ -153,6 +155,12 @@ class Game {
         //play game over music
         this.gameoverMusic.play();
         //this.scoreBoard();
+        //let score = Number;
+
+        //"Final Score: " + score;
+
+        //change innerHTML of element 0 to be score you alr. have.
+        //grab score element & add it to span.
       }
     });
   };

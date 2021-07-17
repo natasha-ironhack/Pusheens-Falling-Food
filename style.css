@@ -43,6 +43,12 @@ body {
     display: none
 }
 
+#finalScore {
+ font-size: 30px;
+ font-family: "comic-sans MS";
+ color: #f73ba2
+}
+
 #gameover-screen {
     display: none
 }
