@@ -147,7 +147,7 @@ class Game {
         // display the gameover screen
         gameoverScreen.style.display = "flex";
         // gameOverScore = finalScore.value;
-        finalScore.innerText = score;
+        finalScore.innerText = "Final Score: " + score;
         score = 0;
         //stop music from running
         this.music.pause();
